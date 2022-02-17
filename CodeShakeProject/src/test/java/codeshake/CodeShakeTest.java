@@ -53,7 +53,7 @@ public class CodeShakeTest extends BaseTest {
         gatekeeperPage.setSecondValue("b");
         resultValue = Integer.valueOf(gatekeeperPage.getValueAttribute(RESULT_VALUE));
         Assert.assertSame(resultValue, 0);
-        System.out.println( "0" + " = " + resultValue);
+        System.out.println( 0 + " = " + resultValue);
 
     }
 
