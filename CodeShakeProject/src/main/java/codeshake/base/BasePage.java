@@ -1,20 +1,10 @@
 package codeshake.base;
 
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.*;
-
-import static codeshake.constant.ConstantsGateKeeperPage.WORD_OF_ADDRESS;
-import static codeshake.constant.ConstantsGateKeeperPage.WORD_OF_CONTACT_ADDRESS;
 
 public class BasePage {
 
@@ -100,7 +90,9 @@ public class BasePage {
         return words;
     }
 
-    public void printSameWords(String[] words1, String[] words2) {
+    public void sameWordsofTwoAddresses(String[] words1, String[] words2) {
+
+        System.out.print("Same words of 2 addresses : ");
 
         for (int i = 0; i < words1.length; i++) {
             for (int k = 0; k < words2.length; k++) {

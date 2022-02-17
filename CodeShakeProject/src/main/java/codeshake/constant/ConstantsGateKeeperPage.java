@@ -22,4 +22,7 @@ public class ConstantsGateKeeperPage extends BaseTest {
     public static String[] WORD_OF_ADDRESS;
     public static String[] WORD_OF_CONTACT_ADDRESS;
 
+    public static String ADDRESS;
+    public static String CONTACT_ADDRESS;
+
 }

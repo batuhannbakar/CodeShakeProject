@@ -40,28 +40,43 @@ public class GatekeeperPage extends BasePage {
             waitUntilElementIsVisible(BOBI_CONTROL);
             log.info("!!! Found BOBI !!!");
 
-        }
-        catch (Throwable throwable){
-            log.info("!!! Can not find the Bobi !!!");
+        } catch (Throwable throwable) {
+            log.error("!!! Can not find the Bobi !!!");
         }
     }
 
-    public void beginBattle(){
+    public void beginBattle() {
         try {
             click(BEGIN_BATTLE);
             waitUntilElementIsVisible(ORANGE_TARGET);
             log.info("Battle Started");
-        }
-        catch (Throwable throwable){
-            log.info("!!! Battle could not Start");
+        } catch (Throwable throwable) {
+            log.error("!!! Battle could not Start");
         }
 
     }
 
-    public void hitTheTarget(){
+    public void hitTheTarget() {
         click(ORANGE_TARGET);
         waitUntilElementIsNotVisible(ORANGE_TARGET);
         log.info("Target was HIT !!! ");
+    }
+
+    public String[] getFirstAddress() {
+
+        ADDRESS = getText(ADDRESS_TEXT);
+        System.out.println("Address Text: " + ADDRESS);
+        WORD_OF_ADDRESS = getWords(ADDRESS);
+        return WORD_OF_ADDRESS;
+    }
+
+    public String[] getSecondAddress() {
+
+        switchFrame(iframe);
+        CONTACT_ADDRESS = getText(CODESHAKE_CONTACT_TEXT);
+        System.out.println("\nContact Address: " + CONTACT_ADDRESS + "\n");
+        WORD_OF_CONTACT_ADDRESS = getWords(CONTACT_ADDRESS);
+        return WORD_OF_CONTACT_ADDRESS;
     }
 
 }
