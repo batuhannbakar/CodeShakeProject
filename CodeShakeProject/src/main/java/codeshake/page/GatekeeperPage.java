@@ -59,7 +59,7 @@ public class GatekeeperPage extends BasePage {
     public void hitTheTarget() {
         click(ORANGE_TARGET);
         waitUntilElementIsNotVisible(ORANGE_TARGET);
-        log.info("Target was HIT !!! ");
+        log.info("Target DEFEATED !!! ");
     }
 
     public String[] getFirstAddress() {

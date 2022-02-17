@@ -69,7 +69,6 @@ public class CodeShakeTest extends BaseTest {
 
         gatekeeperPage.beginBattle();
         gatekeeperPage.hitTheTarget();
-        log.info("Target Defeated !");
     }
 
     @Test
