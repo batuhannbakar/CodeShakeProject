@@ -14,6 +14,7 @@ public class ConstantsGateKeeperPage extends BaseTest {
     public static final By BEGIN_BATTLE = By.xpath("//button//span[normalize-space(text())='Let the battle begin']");
     public static final By ORANGE_TARGET = By.xpath("//div//i[@style='color: orange; cursor: pointer;']");
     public static final By ADDRESS_TEXT = By.xpath("//span[normalize-space(text())='Vefabey Sokak, No:16 D:11, 34349, Gayrettepe/Istanbul/Turkey']");
+
     public static final WebElement iframe = getWebDriver().findElement(By.id("iframe"));
 
     public static final By CODESHAKE_CONTACT_TEXT = By.id("comp-kvi6khho");

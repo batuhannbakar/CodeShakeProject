@@ -72,23 +72,16 @@ public class CodeShakeTest extends BaseTest {
     @Test
     public void SearchBobi() {
 
-        gatekeeperPage.setSearchText("bobi");
-        gatekeeperPage.pressSearchEnter();
-        gatekeeperPage.waitUntilElementIsVisible(BOBI_CONTROL);
-        log.info("!!! Found BOBI !!!");
-        gatekeeperPage.sleep(5);
+        gatekeeperPage.searchBobi("bobi");
 
     }
 
     @Test
     public void ReturnofthePop() {
 
-        gatekeeperPage.click(BEGIN_BATTLE);
-        gatekeeperPage.waitUntilElementIsVisible(ORANGE_TARGET);
-        gatekeeperPage.click(ORANGE_TARGET);
-        gatekeeperPage.waitUntilElementIsNotVisible(ORANGE_TARGET);
+        gatekeeperPage.beginBattle();
+        gatekeeperPage.hitTheTarget();
         log.info("Target Defeated !");
-        gatekeeperPage.sleep(5);
     }
 
     @Test
