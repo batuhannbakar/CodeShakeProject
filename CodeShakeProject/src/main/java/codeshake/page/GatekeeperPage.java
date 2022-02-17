@@ -73,6 +73,7 @@ public class GatekeeperPage extends BasePage {
     public String[] getSecondAddress() {
 
         switchFrame(iframe);
+        scrollToElement(CODESHAKE_CONTACT_TEXT);
         CONTACT_ADDRESS = getText(CODESHAKE_CONTACT_TEXT);
         System.out.println("\nContact Address: " + CONTACT_ADDRESS + "\n");
         WORD_OF_CONTACT_ADDRESS = getWords(CONTACT_ADDRESS);

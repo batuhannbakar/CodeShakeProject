@@ -1,6 +1,7 @@
 package codeshake.base;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -80,6 +81,14 @@ public class BasePage {
             e.printStackTrace();
         }
 
+    }
+
+    public void scrollToElement(By by) {
+        sleep(2);
+        WebElement element = webDriver.findElement(by);
+        JavascriptExecutor js = (JavascriptExecutor) webDriver;
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        sleep(1);
     }
 
     public  String[] getWords(String address) {
