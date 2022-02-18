@@ -49,7 +49,7 @@ public class GatekeeperPage extends BasePage {
 
     public void beginBattle() {
         try {
-     //       click(BEGIN_BATTLE);
+            click(BEGIN_BATTLE);
             waitUntilElementIsVisible(ORANGE_TARGET);
             log.info("Battle Started");
         } catch (Throwable throwable) {
