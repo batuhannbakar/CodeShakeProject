@@ -13,9 +13,6 @@ import static codeshake.constant.ConstantsGateKeeperPage.*;
 public class CodeShakeTest extends BaseTest {
 
     GatekeeperPage gatekeeperPage;
-    Integer firstValue;
-    Integer secondValue;
-    Integer resultValue;
 
 
     @Before

@@ -25,4 +25,9 @@ public class ConstantsGateKeeperPage extends BaseTest {
     public static String ADDRESS;
     public static String CONTACT_ADDRESS;
 
+    public static Integer firstValue;
+    public static Integer secondValue;
+    public static Integer resultValue;
+
+
 }
