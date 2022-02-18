@@ -2,6 +2,7 @@ package codeshake.page;
 
 import codeshake.base.BasePage;
 import logger.Log;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
@@ -42,24 +43,32 @@ public class GatekeeperPage extends BasePage {
 
         } catch (Throwable throwable) {
             log.error("!!! Can not find the Bobi !!!");
+            Assert.fail();
         }
     }
 
     public void beginBattle() {
         try {
-            click(BEGIN_BATTLE);
+     //       click(BEGIN_BATTLE);
             waitUntilElementIsVisible(ORANGE_TARGET);
             log.info("Battle Started");
         } catch (Throwable throwable) {
             log.error("!!! Battle could not Start");
+            Assert.fail();
         }
 
     }
 
     public void hitTheTarget() {
-        click(ORANGE_TARGET);
-        waitUntilElementIsNotVisible(ORANGE_TARGET);
-        log.info("Target DEFEATED !!! ");
+        try {
+            click(ORANGE_TARGET);
+            waitUntilElementIsNotVisible(ORANGE_TARGET);
+            log.info("Target DEFEATED !!! ");
+        }
+        catch (Throwable throwable){
+            log.error("Target MISSED !!!");
+            Assert.fail();
+        }
     }
 
     public String[] getFirstAddress() {
